@@ -456,6 +456,7 @@ p {
     padding-inline-end: 3.25rem;
     overflow: hidden;
     background-color: transparent;
+    width: fit-content;
 
     span {
       position: absolute;
