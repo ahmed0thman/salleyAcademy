@@ -1,0 +1,28 @@
+:root {
+  --color-maron-500: rgb(64, 1, 1);
+
+  --color-yellow-500: rgb(255, 216, 102);
+  --color-yellow-400: #f0bd47;
+
+  --color-green-500: rgb(91, 110, 64);
+
+  --color-gray-500: #4e4e4e;
+
+  --color-gray-800: rgb(243, 244, 246);
+
+  --color-maron-500-rgb: 64, 1, 1;
+
+  --color-yellow-500-rgb: 255, 216, 102;
+
+  --color-green-500-rgb: 91, 110, 64;
+
+  --color-gray-500-rgb: 78, 78, 78;
+
+  --color-white-800: #f4f4f4;
+  --color-white-850: #f9f9f9;
+  --color-white-900: #fafafa;
+
+  --color-black-100: #1b1b1b;
+  --color-black-50: #1b1b1b99;
+  --color-black-30: rgba(27, 27, 27, 0.15);
+}
