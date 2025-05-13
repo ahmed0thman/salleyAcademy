@@ -824,7 +824,7 @@
     position: absolute;
     inset: 0;
     background-image: url("/images/patterns/pluses.svg");
-    opacity: 0.15;
+    opacity: 0.25;
     z-index: -1;
   }
   .page-account {
