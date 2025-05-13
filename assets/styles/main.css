@@ -819,6 +819,7 @@
   align-items: center;
   justify-content: center;
 
+  padding: 2rem 0;
   .bg-pattern {
     position: absolute;
     inset: 0;
@@ -876,13 +877,25 @@
       .form {
         .form-group {
           margin-bottom: 1.5rem;
-          .form-control {
+          .form-control,
+          .form-select {
             padding: 0.75rem 1rem;
             box-shadow: none !important;
             border: none !important;
+            font-weight: 400 !important;
+            color: var(--color-black-100);
+            font-size: 16px;
             &::placeholder {
               color: #737865aa !important;
               font-size: 14px;
+            }
+          }
+
+          .form-select {
+            background-position: left 0.75rem center !important;
+
+            option {
+              font-weight: 400;
             }
           }
         }
@@ -950,10 +963,19 @@
     .page-account {
       width: 90%;
       height: fit-content;
-      padding: 6rem 2rem;
+      max-height: calc(100vh - 1rem);
+      overflow: auto;
+      padding: 4rem 2rem;
       box-shadow: 0 0 8px 4px rgba(var(--color-maron-500-rgb), 0.7);
       &::before {
         bottom: 2rem;
+      }
+
+      .form-wrapper {
+        gap: 1rem;
+        .form-group {
+          margin-bottom: 1rem !important;
+        }
       }
       .floating-imgs {
         display: none;
@@ -963,7 +985,7 @@
 
   @media (max-width: 400px) {
     .page-account {
-      padding: 4rem 1rem;
+      padding: 2rem 1rem;
       height: max-content;
       width: calc(100% - 2rem);
 

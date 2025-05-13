@@ -21,18 +21,41 @@
             <div class="form-wrapper">
                 <div class="py-2">
                     <h4 class="d-flex gap-2 fs-3">
-                        <div class="waving-hand">👋</div>
-                        مرحبًا
+                        إنشاء حساب جديد
                     </h4>
-                    <p class="fs-6 fw-light mt-2">الرجاء تسجيل الدخول هنا</p>
+                    <p class="fs-6 fw-light mt-2">يرجى إدخال التفاصيل</p>
                 </div>
 
                 <form class="form" action="/">
+                    <div class="form-group">
+                        <label class="form-label " for="fname">الاسم الأول </label>
+                        <input class="form-control" type="text" id="fname" name="fname" placeholder="هند" required>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label " for="lname">اسم العائلة </label>
+                        <input class="form-control" type="text" id="lname" name="lname" placeholder="حسين" required>
+                    </div>
                     <div class="form-group">
                         <label class="form-label " for="email">البريد الإلكتروني</label>
                         <input class="form-control" type="email" id="email" name="email"
                             placeholder="robertfox@example.com" required>
                     </div>
+                    <div class="form-group">
+                        <label class="form-label " for="phoneNumber"> رقم الهاتف </label>
+                        <input class="form-control" type="number" id="phoneNumber" name="phoneNumber"
+                            placeholder="+201119998800" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="stageLevel" class="form-label">المرحلة التعليمية</label>
+                        <select class="form-select form-select-lg" name="stageLevel" id="stageLevel">
+                            <option selected>Select one</option>
+                            <option value="">New Delhi</option>
+                            <option value="">Istanbul</option>
+                            <option value="">Jakarta</option>
+                        </select>
+                    </div>
+
                     <div class="form-group">
                         <label class="form-label " for="password"> كلمة المرور</label>
                         <input class="form-control" type="password" id="password" name="password"
@@ -41,17 +64,16 @@
 
                     <div class="d-flex justify-content-between align-items-center">
                         <div class="form-check">
-                            <label class="form-check-label" for="rememberme"> تذكرني</label>
-                            <input class="form-check-input" type="checkbox" value="" id="rememberme" />
+                            <label class="form-check-label" for="agreeTC"> <a class="text-decoration-underline"
+                                    href="/">أوافق على الشروط
+                                    والأحكام</a></label>
+                            <input class="form-check-input" type="checkbox" value="" id="agreeTC" />
                         </div>
 
-                        <a href="" class="fw-light">هل نسيت كلمة المرور؟</a>
                     </div>
 
-                    <div class="d-flex flex-column justify-content-center gap-3 mt-4">
-                        <button class="btn btn-yellow-500 w-100 mt-3" type="submit">تسجيل الدخول</button>
-                        <a href="/pages/account/signup/signup.html" class="btn btn-outline-yellow-500">إنشاء حساب
-                            جديد</a>
+                    <div class="d-flex flex-column justify-content-center gap-3 mt-1">
+                        <button class="btn btn-yellow-500 w-100 mt-3" type="submit">تسجيل </button>
                     </div>
                 </form>
             </div>
