@@ -538,6 +538,68 @@ p {
   }
 }
 
+.modal-message {
+  background-color: var(--color-yellow-400);
+  padding: 2rem 3rem;
+  border-radius: 8px;
+  border: 1px solid var(--gray-gray-20, rgba(164, 161, 170, 0.2));
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2.5rem;
+  color: var(--color-maron-500);
+
+  a,
+  a:hover {
+    color: var(--color-yellow-400) !important;
+    border-radius: 12px;
+  }
+  .img-success {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    background-color: #e5b445;
+
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 140px;
+      height: 140px;
+      border-radius: 50%;
+      background-color: #d0a441;
+      top: 50%;
+      left: 50%;
+      translate: -50% -50%;
+      z-index: 1;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      background-color: var(--color-maron-500);
+      top: 50%;
+      left: 50%;
+      translate: -50% -50%;
+      z-index: 1;
+    }
+
+    img {
+      width: 24px;
+      height: 24px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      translate: -50% -50%;
+      z-index: 2;
+    }
+  }
+}
+
 .card-paymob {
   width: 100%;
   object-fit: cover;

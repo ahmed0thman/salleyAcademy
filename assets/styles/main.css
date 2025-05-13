@@ -816,7 +816,7 @@
   right: 0;
   bottom: 0;
   display: flex;
-  align-items: center;
+
   justify-content: center;
   overflow: auto;
   padding: 2rem 0;
@@ -829,11 +829,11 @@
   }
   .page-account {
     position: relative;
+    margin-block: auto;
+    display: flex;
     width: 80%;
     height: max-content;
-    min-height: 800px;
     max-width: 1240px;
-    max-height: 1000px;
     background-color: var(--color-maron-500);
     border-radius: 12px;
     box-shadow: -12px -12px 44px rgba(var(--color-maron-500-rgb), 0.65),
@@ -844,7 +844,7 @@
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
-    padding: 4rem 0;
+    padding: 3rem 0;
 
     &::before {
       content: "";
@@ -858,16 +858,26 @@
       box-shadow: 0px 40px 36px 16px rgba(var(--color-maron-500-rgb), 0.85);
     }
 
-    display: flex;
-
     .form-wrapper {
       flex-grow: 1;
+      max-width: 440px;
       display: flex;
       flex-direction: column;
       justify-content: center;
       direction: rtl;
       color: #fff;
       gap: 2rem;
+
+      .btn-back {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+
+        &::before {
+          content: url("/images/icons/chevron-down.svg");
+          rotate: -90deg;
+        }
+      }
       .waving-hand {
         animation-name: wave-animation;
         animation-duration: 2.5s;
@@ -878,15 +888,15 @@
 
       .form {
         .form-group {
-          margin-bottom: 1.5rem;
+          margin-bottom: 1rem;
           .form-control,
           .form-select {
-            padding: 0.75rem 1rem;
+            padding: 0.5rem 1rem;
             box-shadow: none !important;
             border: none !important;
             font-weight: 400 !important;
             color: var(--color-black-100);
-            font-size: 16px;
+            font-size: 14px;
             &::placeholder {
               color: #737865aa !important;
               font-size: 14px;
@@ -904,7 +914,6 @@
 
         .form-check {
           padding-left: 0 !important;
-          padding-right: 1.5rem !important;
           .form-check-input {
             border-color: var(--color-yellow-500) !important;
             box-shadow: none !important;
@@ -917,6 +926,35 @@
             --bs-form-check-bg-image: url("/images/icons/check-mark.svg");
             background-size: 110%;
             background-position: center;
+          }
+        }
+
+        .form-otp {
+          display: flex;
+          gap: 1rem;
+          justify-content: center;
+
+          .otp-input {
+            width: 50px;
+            height: 50px;
+            padding: 0.5rem 1rem;
+            box-shadow: none !important;
+            border: none !important;
+            font-weight: 400 !important;
+            color: var(--color-black-100);
+            font-size: 14px;
+            text-align: center;
+            background-color: transparent;
+            border: 1px solid #fff !important;
+            caret-color: #fff;
+            &::placeholder {
+              color: #737865aa !important;
+              font-size: 14px;
+            }
+
+            &.filled {
+              background-color: #fff;
+            }
           }
         }
       }

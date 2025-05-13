@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<meta charset="UTF-8" />
+<link rel="icon" type="image/svg+xml" href="/images/icons/logo.svg" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="stylesheet" href="/assets/styles/styles.css">
+<title>Salley Academy</title>
+</head>
+
+<body>
+
+    <div class="account-wrapper">
+        <div class="bg-pattern"></div>
+        <div class="page-account">
+            <div class="floating-imgs align-items-end">
+                <img src="/images/account/book-l-t.png" alt="">
+                <img class="me-auto" src="/images/account/book-l-c.png" alt="">
+                <img src="/images/account/book-l-b.png" alt="">
+            </div>
+            <div class="form-wrapper">
+                <a href="/pages/account/forgetPassword/forgetPassowrd.html" class="btn-back">
+                    الرجوع
+                </a>
+                <div class="py-2">
+                    <h4 class="d-flex gap-2 fs-3">
+                        أدخل رمز التحقق
+                    </h4>
+                    <p class="fs-6 fw-light mt-2">
+                        لقد قمنا بمشاركة رمز على عنوان البريد الإلكتروني المسجل لديك
+                        <span class="fw-bold">
+                            robertfox@example.com
+                        </span>
+                    </p>
+                </div>
+
+                <form class="form" action="/pages/account/forgetPassword/resetPassword.html">
+                    <div class="form-group form-otp">
+                        <input class="form-control otp-input" type="text" maxlength="1" name="otp1" id="otp1" autofocus>
+                        <input class="form-control otp-input" type="text" maxlength="1" name="otp2" id="otp2">
+                        <input class="form-control otp-input" type="text" maxlength="1" name="otp3" id="otp3">
+                        <input class="form-control otp-input" type="text" maxlength="1" name="otp4" id="otp4">
+                        <input class="form-control otp-input" type="text" maxlength="1" name="otp5" id="otp5">
+                    </div>
+
+
+                    <div class="d-flex flex-column justify-content-center gap-3 mt-1">
+                        <button class="btn btn-yellow-500 w-100 mt-3" type="submit">التحقق</button>
+                    </div>
+                </form>
+            </div>
+            <div class="floating-imgs">
+                <img src="/images/account/book-r-t.png" alt="">
+                <img class="ms-auto" src="/images/account/book-r-c.png" alt="">
+                <img src="/images/account/book-r-b.png" alt="">
+            </div>
+        </div>
+    </div>
+
+    <script type="module" src="./checkOTP.js"></script>
+</body>
+
+</html>
