@@ -1,4 +1,4 @@
-const modalPurchase = document.getElementById("modalPurchase");
+export const modalPurchase = document.getElementById("modalPurchase");
 const purchaseStepMethod = document.getElementById("purchaseStepMethod");
 const purchaseStepCoupon = document.getElementById("purchaseStepCoupon");
 const purchaseStepWallet = document.getElementById("purchaseStepWallet");
