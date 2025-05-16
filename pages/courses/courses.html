@@ -435,36 +435,41 @@
     </footer>
     <div id="modalPurchase" class="modal">
         <div id="purchaseStepMethod" class="modal-view modal-purchase w-50" style="min-width: 300px; max-width: 650px;">
-            <button class="btn-outline-maron-500 btn-nav btn-modal-toggler" data-target="modalPurchase"
-                data-action="close">x</button>
+            <button class="btn-outline-maron-500 btn-nav exit-purchase">x</button>
             <div class="py-3">
                 <h4 class="text-center">
                     طرق الدفع
                 </h4>
-                <div class="d-flex flex-column gap-2 pt-3">
+                <form id="formPurchaseMethod" class="d-flex flex-column gap-2 pt-3">
                     <div class="btn-option btn-option-radion">
-                        <input type="radio" name="method" id="coupon">
+                        <input type="radio" name="method" id="coupon" value="coupon">
                         <label for="coupon"> coupon code</label>
 
                     </div>
                     <div class="btn-option btn-option-radion">
-                        <input type="radio" name="method" id="wallet">
+                        <input type="radio" name="method" id="wallet" value="wallet">
                         <label for="wallet">My Wallet</label>
 
                     </div>
                     <div class="btn-option btn-option-radion">
-                        <input type="radio" name="method" id="paymob">
+                        <input type="radio" name="method" id="paymob" value="paymob">
                         <label for="paymob">PayMob</label>
 
                     </div>
-                </div>
-                <button class="btn btn-next">
-                    <span>استكمال</span>
-                </button>
+                    <div class="d-flex align-items-center justify-content-between gap-2">
+
+                        <span class="error-message text-danger d-none">برجاء إختيار طريقه دفع</span>
+                        <button type="submit" class="btn btn-next">
+                            <span>استكمال</span>
+                        </button>
+                    </div>
+                </form>
+
             </div>
         </div>
-        <div id="purchaseStepCoupon" class="modal-view modal-purchase w-50" style="min-width: 300px; max-width: 550px;">
-            <button class="btn btn-nav">
+        <div id="purchaseStepCoupon" class="d-none modal-view modal-purchase w-50"
+            style="min-width: 300px; max-width: 550px;">
+            <button id="showPurchaseStepMethod" class="btn btn-nav">
                 &#x276E;
             </button>
             <h4 class="text-center">
@@ -478,7 +483,7 @@
                 <span>استكمال</span>
             </a>
         </div>
-        <div id="purchaseStepWallet" class="modal-view modal-purchase p-5">
+        <div id="purchaseStepWallet" class="d-none modal-view modal-purchase p-5">
             <div class="d-flex flex-column gap-4 align-items-center  px-5 py-2">
                 <h4 class="text-center">
                     هل انت متأكد؟
@@ -488,14 +493,14 @@
                 </p>
                 <div class="d-flex gap-3 flex-wrap justify-content-center">
                     <a href="/pages/lectures/lecture.html" class="btn btn-outline-maron-500">نعم ادفعها</a>
-                    <button class="btn btn-maron-500 btn-modal-toggler" data-target="modalPurchase"
-                        data-action="close">الغاء</button>
+                    <button class="btn btn-maron-500 exit-purchase">الغاء</button>
                 </div>
             </div>
         </div>
     </div>
     <script type="module" src="/main.js"></script>
     <script type="module" src="./courses.js"></script>
+    <script type="module" src="./coursePurchase.js"></script>
 </body>
 
 </html>
